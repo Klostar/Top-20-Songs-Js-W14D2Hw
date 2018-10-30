@@ -9,18 +9,13 @@ render(){
         <Song
           key = {entry.id.attributes["im:id"]}
           song = {entry}>
-
         </Song>
       )
     })
 
     return(
       <div className='song-list'>
-
-        <li>
-          {songNodes}
-        </li>
-
+        <ol>  {songNodes}</ol>
       </div>
     )
   }
