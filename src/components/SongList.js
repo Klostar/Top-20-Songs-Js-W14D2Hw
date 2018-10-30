@@ -16,9 +16,11 @@ render(){
 
     return(
       <div className='song-list'>
-        <ol>
+
+        <li>
           {songNodes}
-        </ol>
+        </li>
+
       </div>
     )
   }
