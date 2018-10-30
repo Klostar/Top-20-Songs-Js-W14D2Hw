@@ -1,4 +1,5 @@
 import React from 'react';
+import SongList from '../components/SongList'
 
 
 class SongContainer extends React.Component{
@@ -12,7 +13,7 @@ class SongContainer extends React.Component{
 componentDidMount(){
   fetch('https://itunes.apple.com/gb/rss/topsongs/limit=20/json')
   .then(response => response.json())
-  .then(json => this.setState({entry: json}))
+  .then(json => this.setState({entry: json.feed.entry}))
 
 }
 
